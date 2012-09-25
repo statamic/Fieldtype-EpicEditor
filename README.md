@@ -5,7 +5,8 @@ Epic Editor Fieldtype v0.1.0
 Epic Editor is a full-screen compatible, highly customizable Markdown Editor, implemented as a Statamic Fieldtype.
 
 ## Installing
-1. Drag the add-ons/epiceditor folder into the `/_add-ons/` folder.
+1. Drop the add-ons/epiceditor folder into the `/_add-ons/` folder.
+2. Use `type: epiceditor` in your desired fieldset
 2. Enjoy.
 
 ### Note
