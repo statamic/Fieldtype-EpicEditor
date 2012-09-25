@@ -1,6 +1,6 @@
-Epic Editor Fieldtype v0.0.1
+Epic Editor Fieldtype v0.1.0
 ============================
-*Last Updated September 18th, 2012*
+*Last Updated September 25th, 2012*
 
 Epic Editor is a full-screen compatible, highly customizable Markdown Editor, implemented as a Statamic Fieldtype.
 
@@ -9,4 +9,8 @@ Epic Editor is a full-screen compatible, highly customizable Markdown Editor, im
 2. Enjoy.
 
 ### Note
-This is functional but still in development. Probably buggy, not very customizable.
+This is functional but still in development.
+
+### Changelog
+- **v0.0.1:** Initial proof of concept
+- **v0.1.0:** Adds ability to use multiple EpicEditors on the same page/entry
