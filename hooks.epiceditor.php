@@ -1,5 +1,5 @@
 <?php
-class Hooks_Epiceditor extends Hooks {
+class Hooks_epiceditor extends Hooks {
 
   public function control_panel__add_to_head()
   {

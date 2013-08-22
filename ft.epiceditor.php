@@ -3,7 +3,7 @@ class Fieldtype_epiceditor extends Fieldtype {
 
   var $meta = array(
     'name'       => 'Epic Editor',
-    'version'    => '0.0.2',
+    'version'    => '0.1.1',
     'author'     => 'Statamic',
     'author_url' => 'http://statamic.com'
   );
@@ -13,18 +13,18 @@ class Fieldtype_epiceditor extends Fieldtype {
   function render() {
 
     self::$field_settings = $this->field_config;
-    
+
     $height = isset($this->field_config['height']) ? $this->field_config['height'].'px' : '300px';
 
     $html = "
     <div class='epiceditor-container'>
       <div id='epiceditor-{$this->tabindex}' tabindex='{$this->tabindex}' style='height:{$height}'></div>
       <textarea style='display:none;' id='epiceditor-{$this->tabindex}-textarea' name='{$this->fieldname}'>{$this->field_data}</textarea>
-    
+
       <script type='text/javascript'>
-      var editor_{$this->tabindex} = new EpicEditor({ 
+      var editor_{$this->tabindex} = new EpicEditor({
           container: 'epiceditor-{$this->tabindex}',
-          basePath: 'https://raw.github.com/OscarGodson/EpicEditor/develop/epiceditor',
+          basePath: 'https://raw.github.com/OscarGodson/EpicEditor/0.1.1/epiceditor/',
           clientSideStorage: false,
           file: {
             defaultContent: $('#epiceditor-{$this->tabindex}-textarea').val(),
@@ -41,7 +41,7 @@ class Fieldtype_epiceditor extends Fieldtype {
         });
       </script>
     </div>
-    
+
     ";
     return $html;
   }
@@ -50,7 +50,7 @@ class Fieldtype_epiceditor extends Fieldtype {
     return self::$field_settings;
   }
 
-  function process() {  
+  function process() {
     return trim($this->field_data);
   }
 
