@@ -3,7 +3,7 @@ class Fieldtype_epiceditor extends Fieldtype {
 
   var $meta = array(
     'name'       => 'Epic Editor',
-    'version'    => '0.1.1',
+    'version'    => '0.2.2',
     'author'     => 'Statamic',
     'author_url' => 'http://statamic.com'
   );
@@ -24,7 +24,7 @@ class Fieldtype_epiceditor extends Fieldtype {
       <script type='text/javascript'>
       var editor_{$this->tabindex} = new EpicEditor({
           container: 'epiceditor-{$this->tabindex}',
-          basePath: 'https://raw.github.com/OscarGodson/EpicEditor/0.1.1/epiceditor/',
+          basePath: '../../_add-ons/epiceditor',
           clientSideStorage: false,
           file: {
             defaultContent: $('#epiceditor-{$this->tabindex}-textarea').val(),
@@ -36,7 +36,7 @@ class Fieldtype_epiceditor extends Fieldtype {
           $('#epiceditor-{$this->tabindex}-textarea').val(editor_{$this->tabindex}.exportFile());
         });
 
-        editor_{$this->tabindex}.on('save', function () {
+        editor_{$this->tabindex}.on('update', function () {
           $('#epiceditor-{$this->tabindex}-textarea').val(editor_{$this->tabindex}.exportFile());
         });
       </script>
