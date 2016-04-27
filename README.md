@@ -1,4 +1,4 @@
-Epic Editor Fieldtype v0.1.1
+Epic Editor Fieldtype v0.1.1 ![Statamic v1](https://img.shields.io/badge/statamic-v1-lightgrey.svg?style=flat-square)
 ============================
 *Last Updated August 22nd, 2013*
 
